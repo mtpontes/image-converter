@@ -1,0 +1,16 @@
+{
+  "name": "conversor-imagem",
+  "version": "1.0.0",
+  "description": "Este é um cliente CLI que faz a conversão de formatos de imagem",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mateus Pontes",
+  "license": "ISC",
+  "dependencies": {
+    "@inquirer/prompts": "^5.3.2",
+    "sharp": "^0.33.4"
+  }
+}
