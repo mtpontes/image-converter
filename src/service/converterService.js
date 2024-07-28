@@ -3,6 +3,15 @@ import path from 'path';
 import sharp from 'sharp';
 
 
+/**
+ * Converts images from a target type to an expected type within the specified directories.
+ *
+ * @param {string} targetType - The original file extension of the images to be converted (e.g., ".jpg").
+ * @param {string} expectedType - The target file extension for the converted images (e.g., ".png").
+ * @param {string} origin - The source directory containing the images to be converted.
+ * @param {string} destiny - The destination directory where the converted images will be saved.
+ * @throws Will throw an error if the target image type is unsupported.
+ */
 export async function convert(targetType, expectedType, origin, destiny) {
     const files = fs.readdirSync(origin);
 

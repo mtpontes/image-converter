@@ -20,6 +20,11 @@ function constructChoices() {
     );
 }
 
+/**
+ * Displays a menu to select the source image format.
+ *
+ * @returns {Promise<string>} The selected image format.
+ */
 export async function menuSourceFormat() {
     return select({
         message: "Choose what type of image you want to convert",
@@ -27,6 +32,12 @@ export async function menuSourceFormat() {
     });
 }
 
+
+/**
+ * Displays a menu to select the expected image format.
+ *
+ * @returns {Promise<string>} The selected image format.
+ */
 export async function menuExpectedFormat() {
     return select({
         message: "Choose which type you want to convert to",
@@ -34,6 +45,10 @@ export async function menuExpectedFormat() {
     });
 }
 
+/**
+ * Prompts the user to enter the source directory of the images.
+ * @returns {Promise<string>} The source directory path.
+ */
 export async function menuSourceFolder() {
     return await input({
         message: "Enter the source directory of the images",
@@ -47,6 +62,11 @@ export async function menuSourceFolder() {
     });
 }
 
+/**
+ * Prompts the user to enter the destination directory of the images.
+ * If the directory does not exist, it will be created.
+ * @returns {Promise<string>} The destination directory path.
+ */
 export async function menuDestinyFolder() {
     const defaultDestination = "./default_destination";
     let destiny = await input({
