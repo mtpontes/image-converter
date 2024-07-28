@@ -8,6 +8,8 @@ function constructChoices() {
         ["jpeg", ".jpeg"],
         ["png", ".png"],
         ["webp", ".webp"],
+        ["avif", ".avif"],
+        ["svg", ".svg"]
     ]);
 
     return [...extensions.keys()].map((key, index) =>

@@ -31,6 +31,12 @@ export async function convert(targetType, expectedType, origin, destiny) {
                 case 'webp':
                     transformer = sharp(inputBuffer).webp();
                     break;
+                case 'webp':
+                    transformer = sharp(inputBuffer).avif();
+                    break;
+                case 'webp':
+                    transformer = sharp(inputBuffer).svg();
+                    break;
                 default:
                     throw new Error(`Unsupported target image type: ${imageType}`);
             }
