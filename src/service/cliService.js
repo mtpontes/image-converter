@@ -18,21 +18,21 @@ function constructChoices() {
     );
 }
 
-export async function targetTypeMenu() {
+export async function menuSourceFormat() {
     return select({
         message: "Choose what type of image you want to convert",
         choices: constructChoices()
     });
 }
 
-export async function expectedTypeMenu() {
+export async function menuExpectedFormat() {
     return select({
         message: "Choose which type you want to convert to",
         choices: constructChoices()
     });
 }
 
-export async function menuOriginFolder() {
+export async function menuSourceFolder() {
     return await input({
         message: "Enter the source directory of the images",
         required: true,
