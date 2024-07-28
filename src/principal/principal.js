@@ -1,4 +1,4 @@
-import { targetTypeMenu, expectedTypeMenu, menuOriginFolder, menuDestinyFolder } from '../service/cliService.js';
+import { menuSourceFormat, menuExpectedFormat, menuSourceFolder, menuDestinyFolder } from '../service/cliService.js';
 import { convert } from '../service/converterService.js';
 
 /**
@@ -9,9 +9,9 @@ import { convert } from '../service/converterService.js';
  */
 export async function showMenu() {
     while (true) {
-        let targetType = await targetTypeMenu();
-        let expectedType = await expectedTypeMenu();
-        let origin = await menuOriginFolder();
+        let targetType = await menuSourceFormat();
+        let expectedType = await menuExpectedFormat();
+        let origin = await menuSourceFolder();
         let destiny = await menuDestinyFolder();
 
         convert(targetType, expectedType, origin, destiny);
