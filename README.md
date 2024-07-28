@@ -16,6 +16,14 @@ Run the CLI:
 
     node cli.js
 
+## 🔎 Image formats
+
+- JPG/JPEG
+- PNG
+- WEBP
+- AVIF
+- SVG
+
 ## ⚙️ Main Functions
 
 | Function              | Input  | Required | Description                                                                          |
