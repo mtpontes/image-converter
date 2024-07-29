@@ -27,7 +27,7 @@ This is a fast and straightforward cli client. This CLI helps to convert images 
 - Node 22 (may also work on versions higher than 12.0)
 
 ### 📦 Installing
-Run the command:
+Clone the repository:
 
     git clone https://github.com/mtpontes/image-converter.git
 
