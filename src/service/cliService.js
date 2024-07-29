@@ -3,21 +3,16 @@ import { input } from '@inquirer/prompts';
 import { select, Separator } from '@inquirer/prompts';
 
 function constructChoices() {
-    const extensions = new Map([
-        ["jpg", ".jpg"],
-        ["jpeg", ".jpeg"],
-        ["png", ".png"],
-        ["webp", ".webp"],
-        ["avif", ".avif"],
-        ["svg", ".svg"]
-    ]);
+    const extensions = [
+        { name: "jpg", value: ".jpg" },
+        { name: "jpeg", value: ".jpeg" },
+        { name: "png", value: ".png" },
+        { name: "webp", value: ".webp" },
+        { name: "avif", value: ".avif" },
+        { name: "svg", value: ".svg" },
+    ]
 
-    return [...extensions.keys()].map((key, index) =>
-        ({ 
-            name: key, 
-            value: extensions.get(key)
-        })
-    );
+    return extensions;
 }
 
 /**
@@ -28,7 +23,7 @@ function constructChoices() {
 export async function menuSourceFormat() {
     return select({
         message: "Choose what type of image you want to convert",
-        choices: constructChoices()
+        choices: constructChoices(),
     });
 }
 
@@ -39,7 +34,7 @@ export async function menuSourceFormat() {
  * @returns {Promise<string>} The selected image format.
  */
 export async function menuExpectedFormat() {
-    return select({
+    return await select({
         message: "Choose which type you want to convert to",
         choices: constructChoices()
     });
@@ -74,13 +69,16 @@ export async function menuDestinyFolder() {
         default: defaultDestination,
         required: false,
         validate: value => {
+            // use 'value' instead of 'destiny' here
             if (value != null && value.trim() !== '') {
-                if (!fs.existsSync(value)) 
-                    fs.mkdir(destiny, { recursive: true });
+                if (!fs.existsSync(value)) {
+                    fs.mkdirSync(value, { recursive: true });
+                }
             }
             return true;
         }
     });
+
     if (!fs.existsSync(defaultDestination)) {
         fs.mkdir(defaultDestination, { recursive: true });
     }
