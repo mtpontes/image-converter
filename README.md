@@ -2,20 +2,6 @@
 
 This is a fast and straightforward cli client. This CLI helps to convert images from one format to another, capturing all image files in the directory with the target format and converting them to the desired format. I created this CLI for personal use and am now making it publicly available.
 
-## 🚀 Installation
-
-Run the command:
-
-    git clone https://github.com/mtpontes/image-converter.git
-
-Install the dependencies:
-
-    npm install
-
-Run the CLI:
-
-    node cli.js
-
 ## 🔎 Image formats
 
 - JPG/JPEG
@@ -32,6 +18,26 @@ Run the CLI:
 | `menuExpectedFormat`  | string | true     | Menu to choose the desired image format                                              |
 | `menuSourceFolder`    | string | true     | Prompts for the address where the images to be converted are located and validates the address. Example input: `E:\images` |
 | `menuDestinyFolder`   | string | false    | Prompts for the destination directory of the images. If no destination directory is specified, the conversions will be sent to the **default_destination** directory at the project root |
+
+## 🚀 Installation
+
+### 📋 Prerequisites
+
+- npm
+- Node 22 (may also work on versions higher than 12.0)
+
+### 📦 Installing
+Run the command:
+
+    git clone https://github.com/mtpontes/image-converter.git
+
+Install the dependencies:
+
+    npm install
+
+Run the CLI:
+
+    node cli.js
 
 ## 🤔  FAQ
 
