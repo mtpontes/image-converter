@@ -1,6 +1,6 @@
 # Image Converter
 
-This is a fast and straightforward cli client. This CLI helps to convert images from one format to another, capturing all image files in the directory with the target format and converting them to the desired format. I created this CLI for personal use and am now making it publicly available.
+This is a fast and straightforward CLI client. This CLI helps you convert images from one format to another by taking all the image files in the target format directory and converting them to the desired format. I created this CLI for personal use and am now making it publicly available. I use it in situations where I need to convert batches of images to another format, so if that's what you need, it should help you.
 
 ## 🔎 Image formats
 
