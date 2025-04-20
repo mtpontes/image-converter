@@ -4,7 +4,9 @@
   "description": "Este é um cliente CLI que faz a conversão de formatos de imagem",
   "main": "index.js",
   "type": "module",
+  "bin": "./index.js",
   "scripts": {
+    "build": "pkg . --targets node16-win-x64 --output image-converter.exe",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mateus Pontes",

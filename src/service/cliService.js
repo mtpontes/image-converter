@@ -80,7 +80,7 @@ export async function menuDestinyFolder() {
     });
 
     if (!fs.existsSync(defaultDestination)) {
-        fs.mkdir(defaultDestination, { recursive: true });
+        fs.mkdirSync(defaultDestination, { recursive: true });
     }
 
     return destiny;

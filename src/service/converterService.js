@@ -24,7 +24,7 @@ export async function convert(targetType, expectedType, origin, destiny) {
                 path.parse(file).name.concat(expectedType);
             const resultFileCompletePath = 
                 path.join(destiny, resultFileCompleteName);
-            
+
             const inputBuffer = fs.readFileSync(filepath);
 
             const imageType = expectedType.replace('.', '');
