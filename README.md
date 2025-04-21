@@ -37,7 +37,7 @@ Install the dependencies:
 
 Run the CLI:
 
-    node cli.js
+    node index.js
 
 ## 🤔  FAQ
 
