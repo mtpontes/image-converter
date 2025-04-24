@@ -8,7 +8,6 @@ This is a fast and straightforward CLI client. This CLI helps you convert images
 - PNG
 - WEBP
 - AVIF
-- SVG
 
 ## ⚙️ Main Functions
 
