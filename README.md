@@ -19,14 +19,14 @@ This is a fast and straightforward CLI client. This CLI helps you convert images
 | `menuSourceFolder`    | string | true     | Prompts for the address where the images to be converted are located and validates the address. Example input: `E:\images` |
 | `menuDestinyFolder`   | string | false    | Prompts for the destination directory of the images. If no destination directory is specified, the conversions will be sent to the **default_destination** directory at the project root |
 
-## 🚀 Installation
+## 📦 Installation
 
 ### 📋 Prerequisites
 
 - npm
 - Node 22 (may also work on versions higher than 12.0)
 
-### 📦 Installing
+### 🚀 Run
 Clone the repository:
 
     git clone https://github.com/mtpontes/image-converter.git
